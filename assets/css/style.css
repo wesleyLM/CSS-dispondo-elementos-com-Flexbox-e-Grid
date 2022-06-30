@@ -64,18 +64,21 @@ body{
     color: var(---fonte);
 }
 
-.principal,
-.principal-picos{
+.principal{
     padding: 1.5rem 1rem;
     display: grid;
     gap: 1rem;
     grid-area: 2/2;
 
 }
+.principal-picos{
+    padding: 1.5rem 1rem;
+}
 
 .cartao__mapa{
     height: 468px;   
-    width: max-content; 
+    width: 367px;
+    margin: 1rem 0;
 }
 
 .titulo-pagina,
@@ -92,8 +95,11 @@ body{
     }
 
     .cartao__mapa{
-        width: 892px;
+        width: 1022px;
         grid-area: mapa-destaques;
+   
+        height: initial;   
+        margin: 0;
     }
 
     .principal{
@@ -112,6 +118,10 @@ body{
     }
 
     .principal-picos{
+        display: grid;
+        gap: 1rem;
+        grid-area: 2/2;
+
         grid-template-columns: auto 1fr auto;
         column-gap: 2rem;
 
