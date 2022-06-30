@@ -1,0 +1,89 @@
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(---cabeçalho_mobile);
+
+    padding: 0.5rem 1rem;
+
+    box-shadow: var(---sombras);
+
+    grid-area: 1/2 / span;
+}
+
+.cabecalho__perfil{
+    display: none;
+}
+
+.cabecalho__menu i::before {
+    content: var(---Menu);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cabecalho__notificacao i::before {
+    content: var(---Notificação);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cabecalho__link-logo{
+    width: 2.5rem;
+}
+
+@media screen and (min-width: 1440px){
+    .cabecalho{
+        background-color: var(---cabeçalho);
+
+        display: grid;
+        grid-template-columns: 1fr auto;
+        column-gap: 2rem;
+
+        padding: 1rem 60px;
+
+        height: 80px;
+
+        box-sizing: border-box;
+    }
+
+    .cabecalho__menu,
+    .cabecalho__link-logo{
+        display: none;
+    }
+
+    .cabecalho__perfil{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 0.5rem;
+        align-items: center;
+        justify-self: flex-end;
+
+        color: var(---fonte_alternativa);
+
+        padding: 0.5rem 2rem;
+
+        border-right: 1px solid var(---fonte_alternativa);
+
+    }
+
+    .cabecalho__perfil::before{
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url("../img/profile_2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    .cabecalho__perfil::after{
+        content: var(---Seta-baixo);
+
+        font-size: 1.5rem;
+
+        color: var(---fonte);
+    }
+}

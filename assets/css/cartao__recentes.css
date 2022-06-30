@@ -1,0 +1,75 @@
+.cartao__recentes{
+    display: none;
+}
+
+@media screen and (min-width: 1440px){
+    .cartao__recentes{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-items: center;
+        row-gap: 1.5rem;
+
+        width: 256px;
+
+        padding: 1rem;
+
+        box-sizing: border-box;  
+
+        align-self: flex-start;
+
+    }
+    .cartao__recentes-picos{
+        grid-area: favoritos;
+    }
+
+    .video-recente{
+        grid-area: video-recentes;
+    }
+
+    .nova-arte{
+        grid-area: nova-arte;
+    }
+
+    .cartao__recentes-link{
+        font-size: 0.8rem;
+
+        color: var(---links);
+    }
+
+    .cartao__recentes-lista{
+        display: grid;
+        row-gap: 1rem;
+        grid-column: span 2;
+    }
+
+    .cartao__recentes-item{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem;
+    }
+
+    .cartao__recentes-img{
+        width: 32px;
+
+        grid-row: span 2;
+    }
+
+    .cartao__recentes-titulo-item{
+        font-size: 0.9rem;
+
+        line-height: 1.2rem;
+
+        font-weight: 700;
+    }
+
+    .cartao__recentes-titulo-picos{
+        font-weight: 700;
+
+        font-size: 1.2rem;
+    }
+
+    .cartao__recentes-perfil{
+        font-size: 0.8rem;
+        color: var(---fonte_alternativa);
+    }
+}

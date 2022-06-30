@@ -1,0 +1,44 @@
+.secao{
+    display: grid;
+    gap: 1rem;
+}
+
+.cartao__info-valor::before{
+    content: var(---Moeda);
+
+    font-size: 1rem;
+}
+
+.titulo-secao,
+.titulo-secao-picos{
+    font-size: 1.5rem;
+
+    font-weight: 700;
+}
+.mais-visitados{
+    grid-area: mais-visitados;
+}
+
+.cartao__btn-compra::before{
+    content: var(---Carrinho);
+
+    font-size: 1.5rem;
+}
+@media screen and (min-width: 1440px)  {
+    .secao{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .mais-recentes{
+        grid-area: mais-recentes;
+    }
+
+    .mais-visto{
+        grid-area: mais-visto;
+    }
+
+    .titulo-secao,
+    .titulo-secao-picos{
+        grid-column: span 4;
+    }
+}

@@ -1,0 +1,88 @@
+.menu__lateral{
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(---menu_lateral);
+
+    width: 75vw;
+    height: 100vh;
+
+    position: absolute;
+    left: -100vw;
+    transition: all .25s;
+}
+
+.menu__lateral.ativo{
+    left: 1vw;
+    transition: all .25s;
+}
+
+.menu__lateral-logo{
+    align-self: center;
+
+    width: 118px;
+
+    padding: 1rem;
+}
+
+.menu__lateral-link{
+    height: 4rem;
+
+    color: var(---fonte_alternativa);
+
+    padding-left: 4rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.menu__lateral-link--ativo{
+    color: var(---fonte);
+
+    padding-left: 3rem;
+
+    border-left: 0.5rem solid var(---fonte);
+}
+
+.menu__lateral-link::before{
+    width: 1.5rem;
+    height: 1.5rem;
+
+    font-size: 1.5rem;
+
+    position: absolute;
+
+    left: 1.5rem;
+}
+
+.menu__lateral-link--inicio::before{
+    content: var(---Inicio)
+}
+
+.menu__lateral-link--video::before{
+    content: var(---Videos);
+}
+
+.menu__lateral-link--picos::before{
+    content: var(---Picos);
+}
+
+.menu__lateral-link--integrantes::before{
+    content: var(---Integrantes);
+} 
+
+.menu__lateral-link--camisas::before{
+    content: var(---Camisas);
+}
+
+.menu__lateral-link--pinturas::before{
+    content: var(---Pinturas);
+}
+
+@media screen and (min-width: 1440px){
+    .menu__lateral{
+        position: static;
+        width: 200px;
+        grid-area: 1/1 / span 2 ;
+    }
+}

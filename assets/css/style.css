@@ -1,0 +1,133 @@
+:root {
+    ---corpo: #1D232A;
+
+    ---cabeçalho: #1D232A;
+
+    ---cabeçalho_mobile: #15191C;
+
+    ---menu_lateral: #15191C;
+
+    ---cartao: #2C343A;
+
+    ---fonte: #FFFFFF;
+
+    ---fonte_alternativa: #95999C;
+
+    ---links: #0480DC;
+
+    ---botão: #0480DC;
+
+    ---sombras: 0px 4px 4px rgba(0, 0, 0, 0.16);
+
+    /* Icones */
+
+    ---Camisas: "\e900";
+    ---Carrinho: "\e901";
+
+    ---Inicio: "\e902";
+
+    ---Integrantes: "\e903";
+
+    ---Menu: "\e904";
+
+    ---Moeda: "\e905";
+
+    ---Notificação: "\e906";
+
+    ---Pico: "\e908";
+
+    ---Picos: "\e909";
+
+    ---Pinturas: "\e90a";
+
+    ---Play: "\e90b";
+
+    ---Relogio: "\e90c";
+
+    ---Seta-baixo: "\e90d";
+
+    ---Videos: "\e90e";
+
+    ---Visualizacao: "\e90f";
+}
+
+
+
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+body{
+    background-color: var(---corpo);
+    font-family: 'Open Sans', 'icones', sans-serif;
+    color: var(---fonte);
+}
+
+.principal,
+.principal-picos{
+    padding: 1.5rem 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-area: 2/2;
+
+}
+
+.cartao__mapa{
+    height: 468px;   
+    width: max-content; 
+}
+
+.titulo-pagina,
+.titulo-pagina-picos{
+    font-size: 1.5rem;
+
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1440px){
+    body{
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .cartao__mapa{
+        width: 892px;
+        grid-area: mapa-destaques;
+    }
+
+    .principal{
+        grid-template-columns: auto 1fr auto;
+        column-gap: 2rem;
+
+        padding: 1rem 60px;
+        
+        grid-template-areas: 
+            "titulo-pagina titulo-pagina titulo-pagina"
+            "video-destaque video-destaque video-recentes"
+            "mais-visto mais-visto mais-visto"
+            "nova-arte arte-destaque arte-destaque"
+            "mais-recentes mais-recentes mais-recentes"
+        ;
+    }
+
+    .principal-picos{
+        grid-template-columns: auto 1fr auto;
+        column-gap: 2rem;
+
+        padding: 1rem 60px;
+        
+        grid-template-areas: 
+            "titulo-pagina-picos titulo-pagina-picos titulo-pagina-picos"
+            "mapa-destaques mapa-destaques  favoritos"
+            "mais-visitados mais-visitados mais-visitados"
+        ;
+    }
+
+    .titulo-pagina{
+        grid-area: titulo-pagina;
+    }
+    .titulo-pagina-picos{
+        grid-area: titulo-pagina-picos;
+    }
+}
